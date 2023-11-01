@@ -1,0 +1,100 @@
+.jobs .subtitle {
+  color: var(--grey-2);
+}
+
+.text {
+  color: var(--grey-6);
+}
+
+.text strong {
+  color: var(--grey-8);
+}
+
+.company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  padding: 2rem;
+  background: var(--grey-1);
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--grey-2);
+  position: relative;
+}
+
+.company::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color-light), var(--primary-color));
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.company-year {
+  position: absolute;
+  top: 2.2rem;
+  left: -10rem;
+  color: var(--grey-7);
+  font-size: 1.4rem;
+  text-align: right;
+  width: 8rem;
+}
+
+.company-title {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.company-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--grey-7);
+}
+
+.company-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-content: start;
+}
+
+.company-skills li {
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: var(--white);
+}
+
+@media (max-width: 800px) {
+  .jobs {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .jobs .subtitle {
+    color: var(--black);
+  }
+  .jobs-text {
+    font-size: 1.8rem;
+  }
+  .company-year {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+    font-weight: 700;
+  }
+  .company-year::before {
+    content: 'Ano: ';
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 400px) {
+  .company {
+    grid-template-columns: 1fr;
+  }
+}

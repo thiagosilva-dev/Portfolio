@@ -1,0 +1,130 @@
+.education {
+  background: var(--grey-8);
+  color: var(--white);
+}
+
+.education .subtitle {
+  color: var(--black);
+}
+
+.education-text {
+  color: var(--grey-4);
+}
+
+.education-text strong {
+  color: var(--white);
+}
+
+.education-container {
+  position: relative;
+}
+
+.education-container::after {
+  content: '';
+  display: block;
+  width: 12rem;
+  height: 11rem;
+  background: url(../img/detalhe.svg) no-repeat center;
+  position: absolute;
+  bottom: -5.5rem;
+  left: 4rem;
+}
+
+.university-card {
+  flex: 1;
+  padding: 2rem;
+  background: var(--grey-black);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.university-type {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--grey-1);
+  margin-bottom: 1rem;
+}
+
+.university-course {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.university-course::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color-light), var(--primary-color));
+  position: absolute;
+  left: -24px;
+}
+
+.university {
+  font-size: 1.8rem;
+  color: var(--grey-1);
+}
+
+.additional-education h3 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--grey-5);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.additional-education h3::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -2px;
+}
+
+.courses {
+  margin-bottom: 6rem;
+}
+
+.courses h3::before {
+  background: url('../img/cursos.svg') no-repeat center center;
+}
+
+.additional-education li {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.additional-education span {
+  color: var(--grey-5);
+}
+
+.courses li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .education-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .education .education-subtitle {
+    color: var(--white);
+  }
+  .education-text {
+    font-size: 2rem;
+  }
+  .additional-education h3::before {
+    position: initial;
+    margin-bottom: 1rem;
+  }
+}
