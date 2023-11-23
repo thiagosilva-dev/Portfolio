@@ -37,7 +37,9 @@
   border: 1px solid var(--black);
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+
+  margin-bottom: 3rem;
 }
 
 .university-type {
